@@ -54,8 +54,3 @@ for seed in range(1, 20):
 
     results = pd.concat([results, new_row], ignore_index=True)
     print(f"Seed {seed}: FDR={fdr:.4f}, TPR={tpr:.4f}, SHD={shd}")
-
-print("\n=== 实验统计摘要 ===")
-print(f"平均FDR: {results['fdr'].mean():.4f} ± {results['fdr'].std():.4f}")
-print(f"平均TPR: {results['tpr'].mean():.4f} ± {results['tpr'].std():.4f}")
-print(f"平均SHD: {results['shd'].mean():.2f} ± {results['shd'].std():.2f}")
