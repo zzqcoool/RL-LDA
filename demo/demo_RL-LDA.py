@@ -123,13 +123,3 @@ for seed in range(1, 2):
 
     results = pd.concat([results, new_row], ignore_index=True)
     print(f"Seed {seed}: FDR = {fdr:.4f}, TPR = {tpr:.4f}, SHD = {shd}")
-
-
-print("\n=== 实验统计摘要 ===")
-print(f"平均TPR: {results['tpr'].mean():.4f}")
-print(f"TPR标准差: {results['tpr'].std():.4f}")
-print(f"平均SHD: {results['shd'].mean():.2f}")
-print(f"SHD标准差: {results['shd'].std():.2f}")
-
-print("\n=== 前10次实验结果 ===")
-print(results)
